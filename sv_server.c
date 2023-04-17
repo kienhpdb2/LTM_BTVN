@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
     strcat(clientIP, bufget);
     if (retget <= 0) {printf("failed recv\n");}
     else { 
-        fwrite(clientIP, 1, sizeof(clientIP), f); 
+        fwrite(clientIP, 1, strlen(clientIP), f); 
         fclose(f);
         printf("Received: %s\n", clientIP);
         printf("Save to file: sv_log.txt.\n");
